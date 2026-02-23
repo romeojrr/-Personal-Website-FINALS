@@ -2165,7 +2165,8 @@ input:checked+.slider:before {
 
 /* ==================== FOOTER ==================== */
 .site-footer {
-    display: none; /* hidden on desktop, shown on mobile */
+    display: none;
+    /* hidden on desktop, shown on mobile */
     text-align: center;
     padding: 16px 20px;
     font-size: 0.8rem;
@@ -2223,7 +2224,8 @@ input:checked+.slider:before {
 
 /* ==================== MOBILE SECTION TITLES ==================== */
 .mobile-section-title {
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
 }
 
 /* ==================== HAMBURGER MENU BUTTON ==================== */
@@ -2369,7 +2371,8 @@ input:checked+.slider:before {
         height: auto;
         min-height: 100vh;
         padding: 8px 10px;
-        padding-top: 62px; /* space for fixed navbar */
+        padding-top: 62px;
+        /* space for fixed navbar */
     }
 
     .central-content {
@@ -2394,17 +2397,17 @@ input:checked+.slider:before {
         max-height: 52px;
     }
 
-    /* Hide desktop tabs and burger menu — all sections visible */
+    /* Hide desktop tabs, show burger menu */
     .nav-tabs {
         display: none;
     }
 
     .burger-btn {
-        display: none;
+        display: flex;
     }
 
     .mobile-menu-overlay {
-        display: none;
+        display: block;
     }
 
     .theme-toggle-container {
@@ -2433,7 +2436,7 @@ input:checked+.slider:before {
         font-size: 1rem;
     }
 
-    /* ===== TOP ROW — compact on mobile ===== */
+    /* ===== TOP ROW — stacked on mobile ===== */
     .cv-top-row {
         flex-direction: column;
         height: auto;
@@ -2441,10 +2444,16 @@ input:checked+.slider:before {
     }
 
     .cv-photo-card {
-        height: 160px;
+        height: 280px;
         min-height: unset;
         width: 100%;
         flex-shrink: 0;
+    }
+
+    .cv-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .cv-middle-col {
@@ -2461,11 +2470,11 @@ input:checked+.slider:before {
     }
 
     .intro-welcome-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .intro-text {
-        font-size: 0.88rem;
+        font-size: 0.92rem;
     }
 
     .cv-split-row {
@@ -2477,13 +2486,32 @@ input:checked+.slider:before {
 
     .cv-skills-bar {
         flex: none;
-        height: 90px;
+        height: 100px;
         overflow: hidden;
+    }
+
+    .skill-icon-item img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .skill-icon-item i {
+        font-size: 36px;
+    }
+
+    .skill-icon-item span {
+        font-size: 0.7rem;
     }
 
     .cv-socials {
         flex: none;
         height: auto;
+    }
+
+    .social-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
     }
 
     .cv-music {
@@ -2495,12 +2523,12 @@ input:checked+.slider:before {
 
     .sp-cover {
         flex: none;
-        height: 120px;
+        height: 180px;
         width: 100%;
         object-fit: cover;
     }
 
-    /* ===== PAGE CONTENT — scrollable, all sections visible ===== */
+    /* ===== PAGE CONTENT — tabs controlled by burger menu ===== */
     .page-content {
         flex: none;
         overflow: visible;
@@ -2513,7 +2541,6 @@ input:checked+.slider:before {
     .tab-view {
         height: auto;
         overflow: visible;
-        display: block !important; /* override v-show: handled by isMobile */
     }
 
     .tab-inner {
@@ -2659,7 +2686,7 @@ input:checked+.slider:before {
     }
 
     .cv-photo-card {
-        height: 140px;
+        height: 240px;
         min-height: unset;
     }
 
