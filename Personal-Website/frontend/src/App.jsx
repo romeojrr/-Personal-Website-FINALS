@@ -239,7 +239,7 @@ export default function App() {
       setGuestbookName('');
       setGuestbookMsg('');
     } catch (err) {
-      alert(`Failed to submit: ${err.message}. Make sure the backend is running (cd backend && npm run start:dev).`);
+      alert(`Failed to submit: ${err.message}`);
     }
     setGuestbookLoading(false);
   }, [guestbookName, guestbookMsg]);
