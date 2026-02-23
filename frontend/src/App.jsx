@@ -798,14 +798,12 @@ export default function App() {
                             <div className="guestbook-avatar">
                               {entry.name?.charAt(0)?.toUpperCase() || '?'}
                             </div>
-                            <div className="guestbook-entry-meta">
-                              <span className="guestbook-name">{entry.name}</span>
-                              <span className="guestbook-date">
-                                {new Date(entry.created_at).toLocaleDateString('en-US', {
-                                  year: 'numeric', month: 'short', day: 'numeric',
-                                })}
-                              </span>
-                            </div>
+                            <span className="guestbook-name">{entry.name}</span>
+                            <span className="guestbook-date">
+                              {new Date(entry.created_at).toLocaleDateString('en-US', {
+                                year: 'numeric', month: 'short', day: 'numeric',
+                              })}
+                            </span>
                           </div>
                           <p className="guestbook-msg">{entry.message}</p>
                         </div>
