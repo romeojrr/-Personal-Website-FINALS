@@ -2445,7 +2445,7 @@ input:checked+.slider:before {
         gap: 8px;
     }
 
-    /* ===== PROFILE PHOTO — small like interest images ===== */
+    /* ===== PROFILE PHOTO — small card, full image ===== */
     .cv-photo-card {
         height: auto;
         min-height: unset;
@@ -2456,8 +2456,8 @@ input:checked+.slider:before {
 
     .cv-photo-card .cv-photo {
         width: 100%;
-        height: 200px;
-        object-fit: cover;
+        height: 150px;
+        object-fit: contain;
         border-radius: var(--radius);
     }
 
@@ -2494,38 +2494,38 @@ input:checked+.slider:before {
         gap: 8px;
     }
 
-    /* ===== TECH STACK — fully visible icons ===== */
+    /* ===== TECH STACK — bigger card, fully visible icons ===== */
     .cv-skills-bar {
         flex: none;
-        height: 90px;
+        height: 120px;
         overflow: hidden;
         padding: 8px 10px;
     }
 
     .cv-skills-bar .card-title {
         font-size: 0.85rem;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
     }
 
     .skills-scroller-wrap {
-        gap: 6px;
+        gap: 8px;
     }
 
     .skill-icon-item img {
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
     }
 
     .skill-icon-item i {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .skill-icon-item span {
-        font-size: 0.6rem;
+        font-size: 0.65rem;
     }
 
     .skills-scroller {
-        gap: 14px;
+        gap: 16px;
     }
 
     /* ===== SOCIALS — smaller ===== */
@@ -2565,7 +2565,7 @@ input:checked+.slider:before {
         flex: none;
         height: 180px;
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
         border-radius: var(--radius);
     }
 
@@ -2743,12 +2743,13 @@ input:checked+.slider:before {
 
     .project-image-box {
         width: 100%;
-        height: auto;
+        height: 120px;
+        overflow: hidden;
     }
 
     .project-img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: contain;
     }
 
@@ -2826,7 +2827,7 @@ input:checked+.slider:before {
         font-size: 0.85rem;
     }
 
-    /* Resources */
+    /* Resources — smaller */
     .resources-card {
         height: auto;
         overflow: visible;
@@ -2835,12 +2836,28 @@ input:checked+.slider:before {
     .resource-item {
         flex-direction: column;
         text-align: center;
-        padding: 8px;
+        padding: 6px;
+        gap: 6px;
     }
 
     .resource-icon {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .resource-info h4 {
+        font-size: 0.85rem;
+    }
+
+    .resource-info p {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .download-btn {
+        font-size: 0.75rem;
+        padding: 5px 10px;
     }
 
     /* Social grid — wrap */
@@ -2883,11 +2900,11 @@ input:checked+.slider:before {
     }
 
     .cv-photo-card .cv-photo {
-        height: 160px;
+        height: 120px;
     }
 
     .sp-cover {
-        height: 140px;
+        height: 120px;
     }
 
     .intro-welcome-title {
@@ -2906,17 +2923,17 @@ input:checked+.slider:before {
     }
 
     .cv-skills-bar {
-        height: 75px;
+        height: 100px;
         padding: 6px 8px;
     }
 
     .skill-icon-item img {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
     }
 
     .skill-icon-item i {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .skill-icon-item span {
@@ -2951,7 +2968,7 @@ input:checked+.slider:before {
 
     /* Project boxes */
     .project-image-box {
-        height: auto;
+        height: 90px;
     }
 
     .project-icon-box {
