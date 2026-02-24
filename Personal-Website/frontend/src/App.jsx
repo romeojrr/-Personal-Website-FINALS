@@ -83,6 +83,7 @@ export default function App() {
   const [currentInterest, setCurrentInterest] = useState('Music');
   const [tabAnimating, setTabAnimating] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [lightboxImg, setLightboxImg] = useState(null);
 
   const selectTab = useCallback((tab) => {
     setCurrentTab((prev) => {
@@ -257,6 +258,13 @@ export default function App() {
       scrollerWrap.removeEventListener('mouseenter', enter);
       scrollerWrap.removeEventListener('mouseleave', leave);
     };
+  }, []);
+
+  // Close lightbox on Escape key
+  useEffect(() => {
+    const handleEsc = (e) => { if (e.key === 'Escape') setLightboxImg(null); };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
   }, []);
 
   // Initial tab animation
@@ -685,7 +693,7 @@ export default function App() {
               <div className="cv-card gallery-card">
                 <div className="gallery-grid">
                   {['pic1.jpg', 'pic4.jpg', 'pic5.jpg', 'pic2.jpg', 'pic12.jpg', 'pic3.jpg', 'pic10.jpg', 'pic8.jpg'].map((pic, i) => (
-                    <div key={i} className="gallery-item">
+                    <div key={i} className="gallery-item" onClick={() => setLightboxImg(`Gallery/${pic}`)} style={{ cursor: 'pointer' }}>
                       <img src={`Gallery/${pic}`} />
                     </div>
                   ))}
@@ -693,6 +701,16 @@ export default function App() {
               </div>
             </div>
           </div>
+
+          {/* Gallery Lightbox */}
+          {lightboxImg && (
+            <div className="gallery-lightbox" onClick={() => setLightboxImg(null)}>
+              <button className="lightbox-close" onClick={(e) => { e.stopPropagation(); setLightboxImg(null); }}>
+                <i className="fas fa-times" />
+              </button>
+              <img src={lightboxImg} alt="Gallery" onClick={(e) => e.stopPropagation()} />
+            </div>
+          )}
 
           {/* ===== PROJECTS ===== */}
           <div className={tabClass('projects')} style={{ display: showTab('projects') ? undefined : 'none' }}>
