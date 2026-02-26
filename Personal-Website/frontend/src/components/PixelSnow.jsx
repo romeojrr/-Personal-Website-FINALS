@@ -204,7 +204,7 @@ export default function PixelSnow({ color = '#ffffff' }) {
       uniforms: {
         uTime: { value: 0 },
         uResolution: { value: new THREE.Vector2(w, h) },
-        uFlakeSize: { value: 0.015 },
+        uFlakeSize: { value: 0.02 },
         uMinFlakeSize: { value: 1.25 },
         uPixelResolution: { value: 500 },
         uSpeed: { value: 1.25 },

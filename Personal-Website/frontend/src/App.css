@@ -2563,6 +2563,13 @@ input:checked+.slider:before {
         padding: 8px 10px;
     }
 
+    .sp-playlist {
+        top: -8px;
+        left: -10px;
+        right: -10px;
+        bottom: -8px;
+    }
+
     .sp-cover {
         flex: none;
         width: 50%;

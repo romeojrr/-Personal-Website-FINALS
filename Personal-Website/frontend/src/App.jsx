@@ -42,7 +42,7 @@ const playlistData = [
   { title: 'Fallen Star', artist: 'The Neighborhood', cover: 'SongCover/Fallen Star_cover.jpg', src: 'Songs/Fallen Star.mp3' },
   { title: 'Self Control', artist: 'Frank Ocean', cover: 'SongCover/Self Control_cover.jpg', src: 'Songs/Self Control.mp3' },
   { title: 'CYANIDE', artist: 'Daniel Caesar', cover: 'SongCover/CYANIDE_cover.jpg', src: 'Songs/CYANIDE.mp3' },
-  { title: 'The Way I Loved You', artist: 'Taylor Swift', cover: 'SongCover/The Way I Loved You_cover.jpg', src: "Songs/The Way I Loved You (Taylor's Version).mp3" },
+  { title: 'The Way I Loved You', artist: 'Taylor Swift', cover: 'SongCover/The Way I Loved You_cover.jpg', src: "Songs/The Way I Loved You (Taylor’s Version).mp3" },
   { title: 'Open Arms', artist: 'SZA (feat. Travis Scott)', cover: 'SongCover/Open Arms_cover.jpg', src: 'Songs/Open Arms (feat. Travis Scott).mp3' },
   { title: 'Loving Machine', artist: 'TV Girl', cover: 'SongCover/Loving Machine_cover.jpg', src: 'Songs/Loving Machine.mp3' },
   { title: 'Thick and Thin', artist: 'LANY', cover: 'SongCover/Thick and Thin_cover.jpg', src: 'Songs/Thick and Thin.mp3' },
@@ -86,9 +86,9 @@ export default function App() {
   const [lightboxImg, setLightboxImg] = useState(null);
 
   const selectTab = useCallback((tab) => {
+    setMobileMenuOpen(false);
     setCurrentTab((prev) => {
       if (tab === prev) return prev;
-      setMobileMenuOpen(false);
       setTabAnimating(false);
       setTimeout(() => {
         setTabAnimating(true);
